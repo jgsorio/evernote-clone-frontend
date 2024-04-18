@@ -1,0 +1,40 @@
+body {
+  overflow: hidden !important;
+}
+
+.side-bar-menu {
+  margin: 0;
+}
+
+form {
+  margin-left: 2rem !important;
+  .form-control {
+    &:focus {
+      outline: none;
+      border-color: inherit;
+      box-shadow: none;
+    }
+  }
+}
+
+.sidebar-login {
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  left: 0;
+  background-image: url("../../../assets/images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+@media (max-width: 768px) {
+  .sidebar-login {
+    display: none !important;
+  }
+  .row {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+}

@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss'
+import Header from "./components/header";
+import { RouterProvider } from "react-router-dom";
+import routes from "./routes";
+import Sidebar from "./components/sidebar";
+import {Col, Container, Row} from "react-bootstrap";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    const getUser = localStorage.getItem("user");
+    return (
+        <>
+            <Header></Header>
+            <Container fluid={true}>
+                <Row>
+                    <Col xs={12} md={12}>
+                        <RouterProvider router={routes} />
+                    </Col>
+                </Row>
+            </Container>
+
+
+        </>
+    )
 }
 
 export default App;

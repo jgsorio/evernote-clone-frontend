@@ -1,0 +1,11 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  height: 100vh;
+  background-color: #cecece;
+  overflow: auto;
+}
+
+.container-fluid {
+  padding: 0 !important;
+}
